@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    image: "/public/projects/nexmeet.PNG",
+    image: "/src/assets/projects/nexmeet.PNG",
     title: "nexmeet",
     description: "a open source event platform",
     url: "https://www.nexmeet.social",
@@ -9,7 +9,7 @@ const projects = [
   },
   {
     id: 2,
-    image: "/public/projects/freechatroom.PNG",
+    image: "/src/assets/projects/freechatroom.PNG",
     title: "freechatroom",
     description: "free chat rooms",
     url: "https://freechatroom-three.vercel.app/",
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    image: "/public/projects/glitchdrop.PNG",
+    image: "/src/assets/projects/glitchdrop.PNG",
     title: "glitchdrop",
     description: "file sharing webapp",
     url: "https://glitchdrop.vercel.app/",
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     id: 4,
-    image: "/public/projects/logomaster.PNG",
+    image: "/src/assets/projects/logomaster.PNG",
     title: "logomaster",
     description: "logo maker and logo editing",
     url: "https://logomaster.vercel.app/",
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     id: 5,
-    image: "/public/projects/todo.PNG",
+    image: "/src/assets/projects/todo.PNG",
     title: "todozen",
     description: "todo app",
     url: "https://todozen-lovat.vercel.app/",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: 6,
-    image: "/public/projects/game grid.PNG",
+    image: "/src/assets/projects/game grid.PNG",
     title: "game grid",
     description: "game listing",
     url: "https://game-grid-phi.vercel.app/",
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     id: 7,
-    image: "/public/projects/next carbon.PNG",
+    image: "/src/assets/projects/next carbon.PNG",
     title: "next carbon",
     description: "carbon credit marketplace",
     url: "https://nextc-template-y6dy.vercel.app/",
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     id: 8,
-    image: "/public/projects/carra.PNG",
+    image: "/src/assets/projects/carra.PNG",
     title: "cara",
     description: "ecommerce website ui",
     url: "https://tejasnasre.github.io/Cara-EcommerceWebsite/",
@@ -65,7 +65,7 @@ const projects = [
   },
   {
     id: 9,
-    image: "/public/projects/qr-code.PNG",
+    image: "/src/assets/projects/qr-code.PNG",
     title: "qr-code",
     description: "simple qr code generator",
     url: "https://tejasnasre.github.io/qrcodeGenerator/",
@@ -73,7 +73,7 @@ const projects = [
   },
   {
     id: 10,
-    image: "/public/projects/rps.PNG",
+    image: "/src/assets/projects/rps.PNG",
     title: "rock paper scissor",
     description: "simple game",
     url: "https://tejasnasre.github.io/RPS-Game/",

@@ -1,14 +1,13 @@
-
-import nexmeet from "./assets/projects/nexmeet.PNG";
-import freechatroom from "./assets/projects/freechatroom.PNG";
-import glitchdrop from "./assets/projects/glitchdrop.PNG";
-import logomaster from "./assets/projects/logomaster.PNG";
-import todo from "./assets/projects/todo.PNG";
-import gameGrid from "./assets/projects/game grid.PNG";
-import nextCarbon from "./assets/projects/next carbon.PNG";
-import cara from "./assets/projects/carra.PNG";
-import qrCode from "./assets/projects/qr-code.PNG";
-import rps from "./assets/projects/rps.PNG";
+import nexmeet from "../../assets/projects/nexmeet.png";
+import freechatroom from "../../assets/projects/freechatroom.png";
+import glitchdrop from "../../assets/projects/glitchdrop.png";
+import logomaster from "../../assets/projects/logomaster.png";
+import todo from "../../assets/projects/todo.png";
+import gameGrid from "../../assets/projects/game grid.png";
+import nextCarbon from "../../assets/projects/next carbon.png";
+import cara from "../../assets/projects/carra.png";
+import qrCode from "../../assets/projects/qr-code.png";
+import rps from "../../assets/projects/rps.png";
 
 const projects = [
   {

@@ -1,14 +1,13 @@
-"use client";
-
-import React from "react";
+import React, { useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import projects from "./projects";
 import { Link } from "react-router";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io5";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-interface project {
+interface Project {
   id: number;
   image: string;
   title: string;
@@ -20,6 +19,32 @@ interface project {
 const Project: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
+
+  // Calculate pagination
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  // Calculate total pages
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  // Pagination handlers
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,7 +74,8 @@ const Project: React.FC = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="w-full mx-auto p-8 bg-[#FEFFF0]"
+      className="font-codefont w-full mx-auto p-8 bg-[#FEFFF0]"
+      id="projects"
     >
       <motion.header
         variants={itemVariants}
@@ -63,9 +89,9 @@ const Project: React.FC = () => {
 
       <motion.div
         variants={containerVariants}
-        className="flex flex-wrap justify-center items-center gap-10"
+        className="flex flex-wrap justify-center items-center gap-10 mb-10"
       >
-        {projects.map((item: project) => (
+        {currentProjects.map((item: Project) => (
           <motion.div
             key={item.id}
             variants={itemVariants}
@@ -90,12 +116,12 @@ const Project: React.FC = () => {
                 </div>
                 <div className="flex justify-center items-center gap-4">
                   <div className="bg-black p-2 text-white rounded-full">
-                    <Link to={item.url} target="_blanck">
+                    <Link to={item.url} target="_blank">
                       <BsArrowUpRight />
                     </Link>
                   </div>
                   <div className="bg-black p-2 text-white rounded-full">
-                    <Link to={item.repo} target="_blanck">
+                    <Link to={item.repo} target="_blank">
                       <IoLogoGithub />
                     </Link>
                   </div>
@@ -105,6 +131,53 @@ const Project: React.FC = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Neo-Brutalist Pagination Controls */}
+      <div className="flex justify-center items-center space-x-6">
+        <button
+          onClick={prevPage}
+          disabled={currentPage === 1}
+          className={`
+            relative w-8 h-8 border-4 border-black 
+            ${
+              currentPage === 1
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-white hover:bg-gray-100 active:translate-x-1 active:translate-y-1"
+            }
+            flex items-center justify-center 
+            font-bold text-black 
+            transition-all duration-200 ease-in-out
+            before:absolute before:inset-[-6px] before:border-4 before:border-black before:z-[-1]
+            disabled:opacity-50
+          `}
+        >
+          <FaChevronLeft className="text-2xl" />
+        </button>
+
+        <div className="bg-white border-4 border-black px-2 font-bold text-lg shadow-[5px_5px_0px_0px_rgb(0,0,0)]">
+          Page {currentPage} of {totalPages}
+        </div>
+
+        <button
+          onClick={nextPage}
+          disabled={currentPage === totalPages}
+          className={`
+            relative w-8 h-8 border-4 border-black 
+            ${
+              currentPage === totalPages
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-white hover:bg-gray-100 active:translate-x-1 active:translate-y-1"
+            }
+            flex items-center justify-center 
+            font-bold text-black 
+            transition-all duration-200 ease-in-out
+            before:absolute before:inset-[-6px] before:border-4 before:border-black before:z-[-1]
+            disabled:opacity-50
+          `}
+        >
+          <FaChevronRight className="text-2xl" />
+        </button>
+      </div>
     </motion.div>
   );
 };

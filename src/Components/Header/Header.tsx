@@ -80,12 +80,12 @@ export default function Header() {
               About //
             </motion.a>
             <motion.a
-              href="#portfolio"
+              href="#projects"
               className="flex flex-col justify-center items-center hover:bg-black hover:text-white transition-colors rounded-full px-6 py-1"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              Portfolio
+              Projects
             </motion.a>
             <motion.a
               href="#hire"
@@ -112,7 +112,7 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 border-2 border-black bg-white z-10 mx-4 rounded-xl"
+            className="md:hidden absolute top-full left-0 right-0 border-2 border-black bg-[#FEFFF0] z-10 mx-4 rounded-xl"
             variants={mobileMenuVariants}
             initial="initial"
             animate="animate"
@@ -128,12 +128,12 @@ export default function Header() {
                 About //
               </motion.a>
               <motion.a
-                href="#portfolio"
+                href="#projects"
                 className="px-4 py-2 hover:bg-black hover:text-white transition-colors"
                 whileHover={{ backgroundColor: "black", color: "white" }}
                 whileTap={{ scale: 0.95 }}
               >
-                Portfolio
+                Projects
               </motion.a>
               <motion.a
                 href="#hire"

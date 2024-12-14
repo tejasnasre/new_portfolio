@@ -6,7 +6,7 @@ import { FaDownload } from "react-icons/fa6";
 const Home: React.FC = () => {
   return (
     <>
-      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-32 md:p-8 flex items-center">
+      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-36 md:pt-36 md:p-8 flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Content */}
@@ -42,7 +42,8 @@ const Home: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className="group relative px-6 py-3 bg-blue-100 text-black border-2 border-black rounded-full font-medium transition-shadow hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                 >
-                  see portfolio
+                  <a href="#projects">see projects</a>
+
                   <div className="absolute top-0 right-0 -mt-2 -mr-2 w-4 h-4 bg-yellow-300 rounded-full border-2 border-black"></div>
                 </motion.button>
 

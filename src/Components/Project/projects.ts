@@ -1,18 +1,7 @@
-import nexmeet from "../../assets/projects/nexmeet.png";
-import freechatroom from "../../assets/projects/freechatroom.png";
-import glitchdrop from "../../assets/projects/glitchdrop.png";
-import logomaster from "../../assets/projects/logomaster.png";
-import todo from "../../assets/projects/todo.png";
-import gameGrid from "../../assets/projects/game grid.png";
-import nextCarbon from "../../assets/projects/next carbon.png";
-import cara from "../../assets/projects/carra.png";
-import qrCode from "../../assets/projects/qr-code.png";
-import rps from "../../assets/projects/rps.png";
-
 const projects = [
   {
     id: 1,
-    image: nexmeet,
+    image: "/assets/projects/nexmeet.png",
     title: "nexmeet",
     description: "a open source event platform",
     url: "https://www.nexmeet.social",
@@ -20,7 +9,7 @@ const projects = [
   },
   {
     id: 2,
-    image: freechatroom,
+    image: "/assets/projects/freechatroom.png",
     title: "freechatroom",
     description: "free chat rooms",
     url: "https://freechatroom-three.vercel.app/",
@@ -28,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    image: glitchdrop,
+    image: "/assets/projects/glitchdrop.png",
     title: "glitchdrop",
     description: "file sharing webapp",
     url: "https://glitchdrop.vercel.app/",
@@ -36,7 +25,7 @@ const projects = [
   },
   {
     id: 4,
-    image: logomaster,
+    image: "/assets/projects/logomaster.png",
     title: "logomaster",
     description: "logo maker and logo editing",
     url: "https://logomaster.vercel.app/",
@@ -44,7 +33,7 @@ const projects = [
   },
   {
     id: 5,
-    image: todo,
+    image: "/assets/projects/todo.png",
     title: "todozen",
     description: "todo app",
     url: "https://todozen-lovat.vercel.app/",
@@ -52,7 +41,7 @@ const projects = [
   },
   {
     id: 6,
-    image: gameGrid,
+    image: "/assets/projects/game-grid.png",
     title: "game grid",
     description: "game listing",
     url: "https://game-grid-phi.vercel.app/",
@@ -60,7 +49,7 @@ const projects = [
   },
   {
     id: 7,
-    image: nextCarbon,
+    image: "/assets/projects/next-carbon.png",
     title: "next carbon",
     description: "carbon credit marketplace",
     url: "https://nextc-template-y6dy.vercel.app/",
@@ -68,7 +57,7 @@ const projects = [
   },
   {
     id: 8,
-    image: cara,
+    image: "/assets/projects/carra.png",
     title: "cara",
     description: "ecommerce website ui",
     url: "https://tejasnasre.github.io/Cara-EcommerceWebsite/",
@@ -76,7 +65,7 @@ const projects = [
   },
   {
     id: 9,
-    image: qrCode,
+    image: "/assets/projects/qr-code.png",
     title: "qr-code",
     description: "simple qr code generator",
     url: "https://tejasnasre.github.io/qrcodeGenerator/",
@@ -84,7 +73,7 @@ const projects = [
   },
   {
     id: 10,
-    image: rps,
+    image: "/assets/projects/rps.png",
     title: "rock paper scissor",
     description: "simple game",
     url: "https://tejasnasre.github.io/RPS-Game/",

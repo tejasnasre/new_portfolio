@@ -48,7 +48,8 @@ const Home: React.FC = () => {
                 </motion.button>
 
                 <motion.a
-                  href="#contact"
+                  href="https://drive.google.com/file/d/1Wz-lxVa6MIsStFEa17sX5HhXbrSw_8ko/view?usp=sharing"
+                  target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center gap-2 px-6 py-3 text-black hover:text-blue-600 font-medium"

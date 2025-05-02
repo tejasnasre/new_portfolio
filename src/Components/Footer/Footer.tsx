@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGlobe, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router";
 import { SiPeerlist } from "react-icons/si";
 
 const Footer: React.FC = () => {
@@ -11,47 +10,54 @@ const Footer: React.FC = () => {
         <nav>
           <ul className="bg-[#FEFFF0] flex items-center space-x-6">
             <li>
-              <p className="text-black hover:text-gray-800">Portfolio 2025</p>
-            </li>
-            <li>
-              <Link
-                to="https://tejasnasre.tech/"
+              <a
+                href="https://tejasnasre.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black hover:text-gray-800"
               >
                 <FaGlobe />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://github.com/TejasNasre"
+              <a
+                href="https://github.com/TejasNasre"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black hover:text-gray-800"
               >
                 <FaGithub />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://www.linkedin.com/in/tejasnasre"
+              <a
+                href="https://www.linkedin.com/in/tejasnasre"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black hover:text-gray-800"
               >
                 <FaLinkedin />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://twitter.com/tejasnasre"
+              <a
+                href="https://twitter.com/tejasnasre"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black hover:text-gray-800"
               >
                 <FaTwitter />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://peerlist.io/tejas_nasre"
+              <a
+                href="https://peerlist.io/tejas_nasre"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black hover:text-gray-800"
               >
                 <SiPeerlist />
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

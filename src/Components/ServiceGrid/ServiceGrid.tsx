@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Hash, Plus, Star, MapPin } from "lucide-react";
+import { Hash, Plus, Star, MapPin, ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 
 const ServicesGrid: React.FC = () => {
@@ -138,6 +138,25 @@ const ServicesGrid: React.FC = () => {
             ))}
           </motion.div>
         </div>
+      </motion.div>
+
+      {/* CTA */}
+      <motion.div
+        variants={itemVariants}
+        className="border-4 border-black p-6 md:p-8 bg-gradient-to-r from-yellow-100 to-yellow-50 text-center hover:shadow-[5px_5px_0px_0px_rgb(0,0,0)] transition-shadow mt-24"
+      >
+        <h3 className="text-2xl font-bold mb-3">
+          Interested in working together?
+        </h3>
+        <p className="text-lg mb-6 max-w-2xl mx-auto">
+          Let’s talk about how I can contribute to your team or project.
+        </p>
+        <a
+          href="/contact"
+          className="inline-flex items-center gap-2 border-4 border-black bg-black text-white px-6 py-3 font-bold hover:bg-white hover:text-black transition-colors"
+        >
+          Get in Touch <ArrowRight className="w-5 h-5" />
+        </a>
       </motion.div>
     </div>
   );

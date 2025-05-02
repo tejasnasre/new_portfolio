@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Volume2, VolumeX, Play, Pause } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface BackgroundMusicProps {
@@ -12,7 +12,6 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
   autoplay = false,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showControls, setShowControls] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [firstInteractionComplete, setFirstInteractionComplete] =
     useState(false);
@@ -49,11 +48,9 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
       }
 
       if (autoplay && audioRef.current && !isPlaying) {
-        console.log("First interaction - attempting to play audio");
         audioRef.current
           .play()
           .then(() => {
-            console.log("Audio playing successfully after interaction");
             setIsPlaying(true);
             setFirstInteractionComplete(true);
 
@@ -83,13 +80,11 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
         if (document.hidden) {
           // When page is not visible, pause audio but keep state
           if (isPlaying) {
-            console.log("Page hidden - pausing audio");
             audioRef.current.pause();
           }
         } else {
           // When page becomes visible again, resume if it was playing before
           if (isPlaying) {
-            console.log("Page visible - resuming audio");
             audioRef.current
               .play()
               .catch((error) =>
@@ -112,29 +107,23 @@ const BackgroundMusic: React.FC<BackgroundMusicProps> = ({
     // Stop event propagation to prevent triggering the document click handler
     e.stopPropagation();
 
-    console.log("Button clicked - current state:", isPlaying);
-
     if (!audioRef.current) {
-      console.error("Audio reference is null");
       return;
     }
 
     if (isPlaying) {
       // Currently playing, need to pause
-      console.log("Attempting to pause audio");
       audioRef.current.pause();
       setIsPlaying(false);
-      console.log("Audio paused, state updated to:", false);
     } else {
       // Currently paused, need to play
-      console.log("Attempting to play audio");
+
       setFirstInteractionComplete(true); // Mark first interaction as complete
 
       try {
         audioRef.current
           .play()
           .then(() => {
-            console.log("Audio started playing successfully");
             setIsPlaying(true);
           })
           .catch((error) => {

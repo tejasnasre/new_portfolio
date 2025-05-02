@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import BackgroundMusic from "./Components/Audio/BackgroundMusic";
 
 const OutletCom: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const OutletCom: React.FC = () => {
       <Header />
       <Outlet />
       <Footer />
+      <BackgroundMusic audioSrc="/assets/audio/song.mp3" autoplay={true} />
     </>
   );
 };

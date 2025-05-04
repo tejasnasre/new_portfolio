@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                 </motion.button>
 
                 <motion.a
-                  href="https://drive.google.com/file/d/1Wz-lxVa6MIsStFEa17sX5HhXbrSw_8ko/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_0Ym3Vna12tFBrdunvrPYM-lZ-VaumsS/view?usp=drivesdk"
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

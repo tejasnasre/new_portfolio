@@ -1,19 +1,19 @@
 export const eventsData = {
   organized: [
     {
-      name: "Supabase Launch Week 14",
+      name: "Supabase Launch Week 14 - Nagpur",
       year: "2025",
-      role: "Host For LW14",
+      role: "Local Host",
       location: "Nagpur, India",
       imageSrc:
         "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746090908/IMG_20250330_224739_106_1_ogue1a.jpg",
       description:
-        "A series of monthly tech talks featuring industry experts discussing emerging technologies, career development, and technical deep dives in an intimate setting.",
+        "Organized and hosted the Nagpur edition of Supabase Launch Week 14 — a local meetup focused on showcasing Supabase’s latest product updates and building community connections.",
       achievements: [
-        "Curated speakers from top tech companies including Google, Microsoft and Amazon",
-        "Grew attendance from 30 to 150+ participants over 6 months",
-        "Implemented live streaming increasing reach by 300%",
-        "Created networking opportunities leading to 15+ job placements",
+        "Successfully hosted 35+ participants from the local dev community",
+        "Facilitated live product demos and developer networking",
+        "Coordinated venue, food, and logistics with minimal budget",
+        "Received positive feedback from attendees and Supabase core team",
       ],
       gallery: [
         "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746090993/IMG20250330194544_1_tux8ls.jpg",
@@ -22,19 +22,19 @@ export const eventsData = {
       ],
     },
     {
-      name: "Supabase Launch Week 13",
+      name: "Supabase Launch Week 13 - Nagpur",
       year: "2024",
-      role: "Host For LW13",
+      role: "Local Host",
       location: "Nagpur, India",
       imageSrc:
         "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746089860/PXL_20241208_133628077.MP_1_q0ieyp.jpg",
       description:
-        "A comprehensive 5-day bootcamp teaching full-stack web development with React, Node.js and MongoDB. Focused on practical, hands-on learning with real-world projects.",
+        "Hosted the Nagpur chapter of Supabase Launch Week 13, an official community event to celebrate new feature releases and bring developers together for demos, networking, and hands-on sessions.",
       achievements: [
-        "Developed entire curriculum and training materials",
-        "Taught 80+ participants ranging from beginners to intermediate developers",
-        "Achieved 95% completion rate with 30+ complete projects",
-        "Facilitated job placements for top performers",
+        "Brought together 80+ developers for in-person collaboration",
+        "Coordinated venue, refreshments, and event logistics independently",
+        "Hosted live demos, tech talks, and community discussions",
+        "Engaged new Supabase users and fostered local developer connections",
       ],
       gallery: [
         "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746090606/PXL_20241208_105552248.MP_sompog.jpg",
@@ -67,7 +67,7 @@ export const eventsData = {
       name: "Prototype Hackathon",
       year: "2024",
       role: "Lead Organizer",
-      location: "Mumbai, India",
+      location: "Nagpur, India",
       imageSrc:
         "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746091340/IMG_0751_ovtb9k.jpg",
       description:

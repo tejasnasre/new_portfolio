@@ -6,7 +6,7 @@ import { FaDownload } from "react-icons/fa6";
 const About: React.FC = () => {
   return (
     <>
-      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-36 md:pt-36 md:p-8 flex items-center">
+      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-36 md:pt-32 md:p-8 flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Content */}

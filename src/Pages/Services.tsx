@@ -3,7 +3,7 @@ import ServicesGrid from "../Components/ServiceGrid/ServiceGrid";
 
 const Services: React.FC = () => {
   return (
-    <div className="pt-32">
+    <div>
       <ServicesGrid />
     </div>
   );

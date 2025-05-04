@@ -30,7 +30,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-24 md:pt-28 md:p-8">
+      <div className="font-codefont min-h-screen w-full bg-[#FEFFF0] p-4 pt-28 md:pt-28 md:p-8">
         <div className="max-w-7xl mx-auto w-full">
           {/* Hero Section */}
           <motion.div

@@ -3,7 +3,7 @@ import EventsComponent from "../Components/Events/Events";
 
 const Events: React.FC = () => {
   return (
-    <div className="pt-32">
+    <div>
       <EventsComponent />
     </div>
   );

@@ -3,7 +3,7 @@ import ExperienceComponent from "../Components/Experience/Experience";
 
 const Experience: React.FC = () => {
   return (
-    <div className="pt-32">
+    <div className="pt-28">
       <ExperienceComponent />
     </div>
   );

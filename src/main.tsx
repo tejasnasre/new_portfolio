@@ -11,6 +11,7 @@ import Experience from "./Pages/Experience.tsx";
 import Events from "./Pages/Events.tsx";
 import Skills from "./Pages/Skills.tsx";
 import Contact from "./Pages/Contact.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -27,6 +28,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   </StrictMode>
 );

@@ -11,12 +11,14 @@ import Experience from "./Pages/Experience.tsx";
 import Events from "./Pages/Events.tsx";
 import Skills from "./Pages/Skills.tsx";
 import Contact from "./Pages/Contact.tsx";
+import Linktree from "./Pages/Linktree.tsx";
 import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
+        {" "}
         <Route path="/" element={<OutletCom />}>
           <Route index element={<App />} />
           <Route path="about" element={<About />} />
@@ -26,6 +28,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="experience" element={<Experience />} />
           <Route path="events" element={<Events />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="linktree" element={<Linktree />} />
         </Route>
       </Routes>
       <Analytics />

@@ -1,5 +1,21 @@
 const projects = [
   {
+    id: 11,
+    image: "/assets/projects/payplate.PNG",
+    title: "PayPlate",
+    description: "Modern payment platform",
+    url: "https://payplate.vercel.app/",
+    repo: null, // Closed source
+  },
+  {
+    id: 12,
+    image: "/assets/projects/drink-me.PNG",
+    title: "Drink Me Splash Zone",
+    description: "Interactive beverage experience",
+    url: "https://preview--drink-me-splash-zone.lovable.app/",
+    repo: "https://github.com/tejasnasre/drink_me",
+  },
+  {
     id: 1,
     image: "/assets/projects/nexmeet.png",
     title: "nexmeet",
@@ -46,6 +62,14 @@ const projects = [
     description: "game listing",
     url: "https://game-grid-phi.vercel.app/",
     repo: "https://github.com/TejasNasre/Game-Grid",
+  },
+  {
+    id: 13,
+    image: "/assets/projects/pdf-rag.png",
+    title: "PDF RAG System",
+    description: "PDF document retrieval and generation",
+    url: "https://pdf-rag-demo.vercel.app/",
+    repo: "https://github.com/tejasnasre/pdf-rag",
   },
   {
     id: 7,

@@ -39,7 +39,6 @@ export default function Header() {
       },
     },
   };
-
   // Navigation items with path-based routing instead of hash-based
   const navItems = [
     { name: "Home", path: "/" },
@@ -50,6 +49,7 @@ export default function Header() {
     { name: "Experience", path: "/experience" },
     { name: "Events", path: "/events" },
     { name: "Contact", path: "/contact" },
+    { name: "Links", path: "/linktree" },
   ];
 
   const isActive = (path: string) => {

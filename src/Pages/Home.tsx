@@ -46,19 +46,15 @@ const Home: React.FC = () => {
                 <span className="text-sm font-medium">
                   Full Stack Developer
                 </span>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              </div>              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 I code top notch{" "}
                 <span className="relative inline-block">
-                  webapps
+                  webapps & mobile apps
                   <div className="absolute -bottom-2 left-0 w-full h-3 bg-blue-200 -z-10"></div>
                 </span>
-              </h1>
-
-              <p className="text-lg text-gray-600 max-w-lg">
-                Building modern, responsive, and user-friendly web applications
-                with cutting-edge technologies.
+              </h1><p className="text-lg text-gray-600 max-w-lg">
+                Building modern, responsive, and user-friendly web applications 
+                and mobile apps with cutting-edge technologies.
               </p>
 
               <div className="flex flex-wrap gap-4">

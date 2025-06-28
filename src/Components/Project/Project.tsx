@@ -13,7 +13,7 @@ interface Project {
   title: string;
   description: string;
   url: string;
-  repo: string;
+  repo: string | null;
 }
 
 const Project: React.FC = () => {
@@ -120,11 +120,13 @@ const Project: React.FC = () => {
                       <BsArrowUpRight />
                     </Link>
                   </div>
-                  <div className="bg-black p-2 text-white rounded-full">
-                    <Link to={item.repo} target="_blank">
-                      <IoLogoGithub />
-                    </Link>
-                  </div>
+                  {item.repo && (
+                    <div className="bg-black p-2 text-white rounded-full">
+                      <Link to={item.repo} target="_blank">
+                        <IoLogoGithub />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

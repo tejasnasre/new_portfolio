@@ -93,6 +93,19 @@ const About: React.FC = () => {
                     src="https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746094221/IMG20250427165434_1_q8psuv.jpg"
                     alt="Developer Portrait"
                     className="object-cover w-full h-full"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      const parent = e.currentTarget.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `
+                          <div class="h-full w-full flex flex-col items-center justify-center p-4">
+                            <span class="text-2xl font-bold">Tejas Nasre</span>
+                            <p class="text-center mt-2 text-gray-600">Full Stack Developer</p>
+                            <div class="mt-4 text-center text-sm text-gray-500">Profile picture not available</div>
+                          </div>
+                        `;
+                      }
+                    }}
                   />
 
                   {/* Decorative Elements */}

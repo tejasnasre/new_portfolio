@@ -118,9 +118,21 @@ const Linktree: React.FC = () => {
               <div className="absolute inset-0 border-4 border-black bg-yellow-200 rounded-2xl transform -rotate-3"></div>
               <div className="relative w-full h-full border-4 border-black bg-white rounded-2xl overflow-hidden">
                 <img
-                  src="https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746094221/IMG20250427165434_1_q8psuv.jpg"
+                  src="/images/profilr_img.jpg"
                   alt="Tejas Nasre"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="h-full w-full flex flex-col items-center justify-center p-4">
+                          <span class="text-xl font-bold">TN</span>
+                          <p class="text-center mt-1 text-xs text-gray-500">Profile photo not available</p>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               </div>
             </div>

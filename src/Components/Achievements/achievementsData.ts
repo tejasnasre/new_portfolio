@@ -5,8 +5,7 @@ export const achievementsData = {
       title: "CodeHunt Winner",
       description:
         "Won the CodeHunt Hackathon by building an innovative project within 24 hours, standing out among 200+ participants for its creativity, execution, and impact.",
-      image:
-        "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746182815/Scanned_20250216-1511-05_enhanced.jpg_1_-min_acu2yl.png",
+      image: "/images/codehunt_winner.png",
       highlights: [
         "Secured 1st place out of 200+ participants",
         "Developed a complete and functional project in just 24 hours",
@@ -19,8 +18,7 @@ export const achievementsData = {
       title: "CodeCrush Winner",
       description:
         "Won the CodeCrush Hackathon, an 8-hour rapid coding competition, standing out among 250+ participants with a high-impact, innovative solution.",
-      image:
-        "https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746182827/IMG-20241023-WA0004_grk5py.jpg", // Replace if there's a more relevant image
+      image: "/images/codecrush_winner.png", // Replace if there's a more relevant image
       highlights: [
         "Ranked 1st out of 250+ participants in an intense 8-hour challenge",
         "Built and deployed a full-stack solution under tight constraints",

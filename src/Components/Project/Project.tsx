@@ -106,6 +106,19 @@ const Project: React.FC = () => {
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-blue-50">
+                          <span class="text-2xl font-bold">${item.title}</span>
+                          <p class="text-center mt-2 text-gray-600">${item.description}</p>
+                          <div class="mt-4 text-center text-sm text-gray-500">Click to view project</div>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               </div>
 

@@ -85,6 +85,19 @@ const Achievements: React.FC = () => {
                 alt={achievementsData.featured[activeIndex].title}
                 className="w-full h-full object-cover"
                 loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  const parent = e.currentTarget.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `
+                      <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-yellow-50">
+                        <span class="text-xl font-bold">${achievementsData.featured[activeIndex].title}</span>
+                        <p class="text-center mt-2 text-gray-600">Achievement Highlight</p>
+                        <div class="mt-4 text-sm text-yellow-600">🏆 Award of Excellence</div>
+                      </div>
+                    `;
+                  }
+                }}
               />
             </div>
 
@@ -147,6 +160,19 @@ const Achievements: React.FC = () => {
                 alt={achievement.title}
                 className="w-full h-full object-cover"
                 loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  const parent = e.currentTarget.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `
+                      <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-yellow-50">
+                        <span class="text-xl font-bold">${achievement.title}</span>
+                        <p class="text-center mt-1 text-gray-600">${achievement.year}</p>
+                        <div class="mt-3 text-sm text-yellow-600">🏆 Achievement</div>
+                      </div>
+                    `;
+                  }
+                }}
               />
               {achievement.year && (
                 <div className="absolute top-0 right-0 bg-black text-white px-3 py-1 text-sm font-bold">

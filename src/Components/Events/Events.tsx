@@ -7,7 +7,7 @@ import {
   Users,
   ChevronRight,
   ChevronLeft,
-  Image as ImageIcon,
+  Image as ImageI,
   X,
 } from "lucide-react";
 import { eventsData } from "./eventsData";
@@ -135,6 +135,19 @@ const Events: React.FC = () => {
                 src={eventsData.organized[activeIndex].imageSrc}
                 alt={eventsData.organized[activeIndex].name}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  const parent = e.currentTarget.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `
+                      <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-yellow-50">
+                        <span class="text-xl font-bold">${eventsData.organized[activeIndex].name}</span>
+                        <p class="text-center mt-2 text-gray-600">${eventsData.organized[activeIndex].role}</p>
+                        <p class="text-center mt-1 text-sm text-gray-500">${eventsData.organized[activeIndex].location}</p>
+                      </div>
+                    `;
+                  }
+                }}
               />
               <div className="absolute top-0 right-0 bg-black text-white px-4 py-2 font-bold text-sm">
                 {eventsData.organized[activeIndex].year}
@@ -178,7 +191,7 @@ const Events: React.FC = () => {
               {/* Gallery Preview */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <ImageIcon className="w-4 h-4" />
+                  <ImageI className="w-4 h-4" />
                   <h4 className="font-bold text-sm uppercase tracking-wider">
                     Event Gallery
                   </h4>
@@ -197,6 +210,17 @@ const Events: React.FC = () => {
                             eventsData.organized[activeIndex].name
                           } gallery ${idx + 1}`}
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                            const parent = e.currentTarget.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `
+                                <div class="h-full w-full flex flex-col items-center justify-center bg-blue-100 text-[10px] font-bold">
+                                  Gallery ${idx + 1}
+                                </div>
+                              `;
+                            }
+                          }}
                         />
                       </div>
                     )
@@ -250,6 +274,19 @@ const Events: React.FC = () => {
                   src={event.imageSrc}
                   alt={event.name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-yellow-50">
+                          <span class="text-xl font-bold">${event.name}</span>
+                          <p class="text-center mt-2 text-gray-600">${event.role}</p>
+                          <p class="text-center mt-1 text-sm text-gray-500">${event.location}</p>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -387,6 +424,20 @@ const Events: React.FC = () => {
                   src={eventsData.organized[selectedEvent].imageSrc}
                   alt={eventsData.organized[selectedEvent].name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="h-full w-full flex flex-col items-center justify-center p-4 bg-yellow-50">
+                          <span class="text-2xl font-bold">${eventsData.organized[selectedEvent].name}</span>
+                          <p class="text-center mt-2 text-gray-600">${eventsData.organized[selectedEvent].role}</p>
+                          <p class="text-center mt-1 text-sm text-gray-500">${eventsData.organized[selectedEvent].location}</p>
+                          <p class="text-center mt-3 font-bold">${eventsData.organized[selectedEvent].year}</p>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               </div>
 
@@ -436,7 +487,7 @@ const Events: React.FC = () => {
               {/* Gallery */}
               <div className="border-4 border-black p-6 bg-blue-50">
                 <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
-                  <ImageIcon className="w-5 h-5" />
+                  <ImageI className="w-5 h-5" />
                   Event Gallery
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -453,6 +504,22 @@ const Events: React.FC = () => {
                             eventsData.organized[selectedEvent].name
                           } image ${idx + 1}`}
                           className="w-full h-40 object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                            const parent = e.currentTarget.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `
+                                <div class="h-40 w-full flex flex-col items-center justify-center p-4 bg-blue-100">
+                                  <span class="text-sm font-bold">Gallery Image ${
+                                    idx + 1
+                                  }</span>
+                                  <p class="text-center mt-1 text-xs text-gray-600">${
+                                    eventsData.organized[selectedEvent].name
+                                  }</p>
+                                </div>
+                              `;
+                            }
+                          }}
                         />
                       </div>
                     )
@@ -480,6 +547,21 @@ const Events: React.FC = () => {
             src={selectedImage}
             alt="Enlarged event photo"
             className="max-w-full max-h-[90vh] object-contain"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+              const parent = e.currentTarget.parentElement;
+              if (parent) {
+                // Insert a fallback div before the button to maintain hierarchy
+                const fallbackDiv = document.createElement("div");
+                fallbackDiv.className =
+                  "bg-yellow-50 border-4 border-black p-8 flex flex-col items-center justify-center";
+                fallbackDiv.innerHTML = `
+                  <span class="text-2xl font-bold mb-4">Image Not Available</span>
+                  <p class="text-center text-gray-600">The image could not be loaded.</p>
+                `;
+                parent.insertBefore(fallbackDiv, e.currentTarget);
+              }
+            }}
           />
         </div>
       )}

@@ -46,17 +46,18 @@ const Home: React.FC = () => {
                 <span className="text-sm font-medium">
                   Full Stack Developer
                 </span>
-              </div>              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              </div>{" "}
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 I code top notch{" "}
                 <span className="relative inline-block">
                   webapps & mobile apps
                   <div className="absolute -bottom-2 left-0 w-full h-3 bg-blue-200 -z-10"></div>
                 </span>
-              </h1><p className="text-lg text-gray-600 max-w-lg">
-                Building modern, responsive, and user-friendly web applications 
+              </h1>
+              <p className="text-lg text-gray-600 max-w-lg">
+                Building modern, responsive, and user-friendly web applications
                 and mobile apps with cutting-edge technologies.
               </p>
-
               <div className="flex flex-wrap gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -68,7 +69,7 @@ const Home: React.FC = () => {
                 </motion.button>
 
                 <motion.a
-                  href="https://drive.google.com/file/d/17foGhPG8T4YmgfkN69ywEp0gE1QoY6zL/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1WAlWYSUJbV-Gd6TNsqTVk5Yk1yXr627n/view?usp=drive_link"
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -94,9 +95,9 @@ const Home: React.FC = () => {
                 {/* Main Image Container */}
                 <div className="relative h-full border-2 border-black bg-[#FEFFF0] rounded-3xl overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/dbjk3jn4w/image/upload/v1746094221/IMG20250427165434_1_q8psuv.jpg"
+                    src="/images/profilr_img.jpg"
                     alt="Developer Portrait"
-                    className="object-cover w-full"
+                    className="object-contain w-full"
                   />
 
                   {/* Decorative Elements */}
